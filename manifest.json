@@ -1,0 +1,45 @@
+{
+  // ===============================================
+  // 🧩 Search Console Sitemap Sender
+  // -----------------------------------------------
+  // Ebubekir Bastama tarafından geliştirilmiştir.
+  // Bu Chrome uzantısı, Google Search Console'da
+  // sitemap URL'sini otomatik doldurur ve (isteğe bağlı olarak) gönderir.
+  //
+  // 🚀 Özellikler:
+  // - Tek tıklamayla sitemap.xml gönderimi
+  // - XPath tabanlı form algılama
+  // - Manifest V3 standardına tam uyum
+  // ===============================================
+
+  "manifest_version": 3,
+
+  // 🔖 Uzantı Bilgileri
+  "name": "Search Console Sitemap Sender",
+  "version": "1.0.0",
+  "description": "Google Search Console'da sitemap URL'sini otomatik olarak doldurur ve gönderir. (Ebubekir Bastama tarafından geliştirilmiştir.)",
+
+  // ⚙️ Gereken İzinler
+  "permissions": ["scripting"],
+
+  // 🌐 Tüm URL'lerde çalışabilir (isteğe bağlı olarak daraltılabilir)
+  "host_permissions": ["<all_urls>"],
+
+  // 🧠 Arka Plan Servis Çalışanı (Manifest V3 standardı)
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  // 🧭 Uzantı Simgesi ve Başlık Bilgisi
+  "action": {
+    "default_title": "Search Console Sitemap Sender",
+    "default_icon": "images/icon48.png"
+  },
+
+  // 🖼️ Farklı boyutlardaki uzantı simgeleri
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
